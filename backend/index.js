@@ -2,12 +2,14 @@ import express from 'express'
 import cors from 'cors'
 import connection from './Db.js'
 import UserRouter from './Routes/User.js'
+import Configrouter from './Routes/Db_config.js'
 
 const app = express()
 
 app.use(cors())
 app.use(express.json())
 app.use('/user', UserRouter)
+app.use('/config', Configrouter)
 
 app.get('/', (req, res)=>{
     connection.query('desc userdetails', (err, result)=>{
