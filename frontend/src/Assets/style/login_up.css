@@ -1,0 +1,118 @@
+.form{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    margin-top: -1rem;
+    list-style: none;
+    overflow: hidden;
+}
+.login>ul{
+    list-style: none;
+}
+.register>ul{
+    list-style: none;
+}
+
+.login>ul{
+    margin-top: 15rem;
+    gap: 5rem;
+    text-align: center;
+}
+.login>ul>li>label{
+    font-size: 2rem;
+    color: white;
+    font-weight: bolder;
+    
+}
+
+.login>ul>li>input{
+    font-size: 2rem;
+    border-radius: 1.5rem;
+    border: none;
+}
+
+.login>ul>.passwd{
+    margin-left: 1.1rem;
+}
+
+.login>ul>li{
+    margin-top: 5rem;
+}
+button{
+    margin-top: 2rem;
+    width: 10rem;
+    height: 3rem;
+    background-color: white;
+    border: none;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.line1{
+    position: absolute;
+    width: 0.5rem;
+    height: 40rem;
+    background-color: white;
+    top: 6rem;
+    left: 45rem;
+    text-align: center;
+}
+
+.register>ul>li{
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.register>ul{
+    margin-top: 12rem;
+    gap: 5rem;
+    text-align: center;
+}
+.register>ul>li>label{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: end;
+}
+.register>ul>li>input{
+    border-radius: 1.5rem;
+    border: none;
+}
+.email{
+    position: relative;
+    left: -0.1rem;
+}
+.pno{
+    position: relative;
+    left: -0.05rem;
+}
+.pno>input{
+    width: 20rem;
+}
+
+.name>input{
+    width: 20rem;
+}
+
+.email>input{
+    width: 20rem;
+}
+.name, .email{
+    position: relative;
+    left: 4.8rem;
+}
+.pass>input{
+    width: 20rem;
+}
+.pass{
+    position: relative;
+    left: 2.5rem;
+}
+.pass_2>input{
+    width: 20rem;
+}
+.pass_2{
+    position: relative;
+    left: -1.2rem;
+}
