@@ -23,19 +23,19 @@ UserRouter.get("/:uid", (req, res) => {
 });
 
 let query;
-UserRouter.post("/", async(req, res) => {
+UserRouter.post("/", (req, res) => {
   if (!req.body.Name || !req.body.Email || !req.body.Pno || !req.body.Passwd) {
     return res.status(400).json({
       msg: "Missing req fields: Name, Email, Phone number, Password",
     });
   }
-  const result = connection.query("select * from userDetails;", (err, resu) => {
+  connection.query("select * from projectbuilder.user;", (err, resu) => {
     if (err) {
       return -1;
     }
     const id = resu.length +1
-    query = `insert into userDetails value(${id}, \
-        '${req.body.Name}', '${req.body.Email}', ${req.body.Pno}, '${req.body.Passwd}')`;
+    query = `insert into projectbuilder.user value(${id}, \
+        '${req.body.Name}',${req.body.Pno}, '${req.body.Email}',  '${req.body.Passwd}')`;
     console.log(query)
     connection.execute(query, (err)=>{
         if(err){
