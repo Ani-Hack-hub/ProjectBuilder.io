@@ -1,9 +1,12 @@
 import React from 'react'
 import Login_Reg from './Pages/Login_Reg'
+import UserProject from './Pages/UserProject'
+
+
 function App(){
   return (
     <div>
-      <Login_Reg></Login_Reg>
+      <UserProject></UserProject>
     </div>
   )
 }
