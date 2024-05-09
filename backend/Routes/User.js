@@ -5,7 +5,7 @@ const UserRouter = express.Router();
 
 UserRouter.get("/:uid", (req, res) => {
   const uid = req.params.uid;
-  const query = `select * from userdetails where Id = ${uid}`;
+  const query = `select * from projectbuilder.user where uid = ${uid}`;
   res.status(200);
   connection.query(query, (err, result) => {
     if (err) {
@@ -47,8 +47,7 @@ UserRouter.post("/", (req, res) => {
 });
 
 UserRouter.get('/', (req, res)=>{
-    let resu;
-    connection.query('select * from user', (err, result)=>{
+    connection.query('select * from projectbuilder.user', (err, result)=>{
         if (err){
             return -1
         }
