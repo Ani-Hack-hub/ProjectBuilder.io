@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import '../Assets/style/login_up.css'
 
-function Login_Reg() {
+function Login_Reg({IdPasser}) {
   document.title = 'LOGIN/REGISTER'
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
@@ -11,6 +11,8 @@ function Login_Reg() {
   const [pno, setPno]= useState(0)
   const [cemail, setCemail] = useState('')
   const [cpass, setCpass] = useState('')
+  const [success, setSucc] = useState(false)
+  const [match, setMatch] = useState(0)
 
   const handleName = (e)=>{
     setName(e.target.value)
@@ -34,20 +36,34 @@ function Login_Reg() {
   const handleCPass = (e)=>{
     setCpass(e.target.value)
   }
-  const new_User = {
-      "Name":name,
-      "Email":email,
-      "Pno":pno,
-      "Passwd":passwd
-  }
   const handleLogin=()=>{
-    console.log('here')
-    // axios.post('http://localhost:5555/user',new_User).then((res)=>{
-    //   console.log('added')
-    // }).catch((err)=>console.error(err))
+    const login = {'email':cemail, 'passwd':cpass}
+    axios.get('http://localhost:5555/user').then((res)=>{
+      const result = res.data
+      for (var data of result){
+        // console.log(data.paaswd)
+        if (data.email === cemail && data.paaswd === cpass){
+          setSucc(true)
+          setMatch(data.uid)
+          IdPasser(data.uid)
+          break
+        }
+      }
+    })
   }
 
-  
+  const handleRegister =() =>{
+    const new_use = {
+      'Name':name,
+      'Email':email,
+      'Pno':pno,
+      'Passwd':passwd
+    }
+    // console.log(new_use)
+    axios.post('http://localhost:5555/user', new_use).then((res)=>{
+      console.log('user added')
+    }).catch((err)=>{console.error(err)})
+  }
 
   return (
       <ul className='form'>
@@ -65,7 +81,8 @@ function Login_Reg() {
                   <input type="text" name='passwd' value={cpass} onChange={handleCPass}/>
                 </div>
               </li>
-              <button type='submit' onClick={handleLogin}><a href="">LOGIN</a></button>
+              <button type='submit' onClick={handleLogin}>LOGIN</button>
+              {(success === true)?<h1>Successfully logged in</h1> : console.log('false')}
             </ul>
         </li>
         <div className="line-sep"></div>
@@ -101,7 +118,7 @@ function Login_Reg() {
                 <input type="text" name='passwd_2' value={r_passwd} onChange={handleRPass}/>
               </div>
             </li>
-            <button type='submit' onClick={handleLogin}><a href="">REGISTER</a></button>
+            <button type='submit' onClick={handleRegister}>REGISTER</button>
           </ul>
         </li>
       </ul>
