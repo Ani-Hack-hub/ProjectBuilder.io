@@ -10,10 +10,10 @@ function Headbar(){
             </a>
         </div>
       <ul>
-        <li><a href="">HOME</a></li>
+        <li><a href="/">HOME</a></li>
         <li><a href="">QUERY</a></li>
-        <li><a href="">ABOUT</a></li>
-        <li><a href="">USER PROFILE</a></li>
+        <li><a href="/about">ABOUT</a></li>
+        <li><a href="/UserProfile">USER PROFILE</a></li>
       </ul> 
     </nav>
   )
