@@ -39,6 +39,7 @@ function Login_Reg({IdPasser}) {
   const handleLogin=()=>{
     const login = {'email':cemail, 'passwd':cpass}
     axios.get('http://localhost:5555/user').then((res)=>{
+      console.log(res)
       const result = res.data
       for (var data of result){
         // console.log(data.paaswd)

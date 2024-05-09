@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Login_Reg from './Pages/Login_Reg'
-import UserProject from './Pages/UserProject'
+import UserProject from './Pages/UserProfile'
 
 function App(){
   const [uid, setUid]= useState(0)
