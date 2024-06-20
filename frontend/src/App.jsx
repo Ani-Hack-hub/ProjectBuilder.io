@@ -1,19 +1,12 @@
-import React, { useState } from 'react'
-import route from '../src/config'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { useState } from 'react';
+import './App.css';
+import './query.css';
+import IndView from './Pages/IndView';
+import Queryinp from './Pages/Queryinp';
 
-
-function App(){
-  const [uid, setUid]= useState(0)
-  document.title = 'User Profile'
-  const handleUid =(uid)=>{
-    setUid(uid)
-  }
-  const uuid = 1;
-
-  return (
-    <RouterProvider router={route}></RouterProvider>
-  )
+function App() {
+  return <IndView binaryString={1100000000000001} type={'Desktop'} ></IndView>
+  //return <Queryinp></Queryinp>
 }
 
-export default App
+export default App;
