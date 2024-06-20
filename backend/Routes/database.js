@@ -30,15 +30,3 @@ async function create(pname,binaryString,desc,type){
   return result;
 }
 module.exports = {bytype,create};
-
-
-
-
-
-
-
-
-
-
-
-
