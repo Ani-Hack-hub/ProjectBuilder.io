@@ -1,0 +1,73 @@
+
+h1{
+  position :absolute;
+  top:30%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  color: white;
+  background-image: none;
+}
+
+h2{
+  position: absolute;
+  top:50%;
+  left:46%;
+  transform: translate(-50%,-50%);
+  color: white;
+  background-image: none;
+}
+
+.date{
+  position: absolute;
+  top:52.7%;
+  left:63%;
+  transform: translate(-50%,-50%);
+  color: black;
+  background-color: white;
+  background-image: none;
+}
+
+.button{
+  position: absolute;
+  top:62.3%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 100px;
+  height: 25px;
+  font-size: 18px;
+  background-color: white;
+  color:black;
+  background-image: none;
+}
+
+*{
+  background-color: #295FFC;
+}
+
+nav>ul{
+  list-style: none;
+  display: flex;
+  gap: 5rem;
+}
+nav{
+  margin-top: 2rem;
+  margin-left: 4rem;
+  display: flex;
+  gap: 40rem;
+}
+nav>div>a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+nav>ul>li>a{
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+
+
+
+
+

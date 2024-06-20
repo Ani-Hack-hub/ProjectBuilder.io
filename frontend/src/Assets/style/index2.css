@@ -1,0 +1,53 @@
+#name{
+    position :absolute;
+    top:20%;
+    left:20%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+#tech{
+    position :absolute;
+    top:20%;
+    left:40%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+#app{
+    position :absolute;
+    top:20%;
+    left:60%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+#status{
+    position :absolute;
+    top:20%;
+    left:80%;
+    transform: translate(-50%,-50%);
+    color: white;
+}
+
+nav>ul{
+    list-style: none;
+    display: flex;
+    gap: 5rem;
+  }
+  nav{
+    margin-top: 2rem;
+    margin-left: 4rem;
+    display: flex;
+    gap: 40rem;
+  }
+  nav>div>a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
+  nav>ul>li>a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+  }
